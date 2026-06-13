@@ -1,0 +1,36 @@
+[build-system]
+requires      = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name            = "quart-enciphers"
+version         = "0.1.0"
+description     = "Encrypted session interface for Quart using enciphers"
+readme          = "README.md"
+license         = { text = "Apache-2.0" }
+authors         = [{ name = "Mejlad Alsubaie" }]
+keywords        = ["quart", "session", "encryption", "enciphers"]
+requires-python = ">=3.11"
+dependencies    = [
+    "quart >= 0.18",
+    "enciphers",
+    "orjson",
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security :: Cryptography",
+    "Framework :: AsyncIO",
+]
+
+[project.urls]
+Homepage = "https://github.com/mjlad/quart-enciphers"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/quart_enciphers"]
